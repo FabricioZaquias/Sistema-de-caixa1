@@ -16,7 +16,7 @@ function Carrinho({
     );
     const valorFrete = endereco ? calcularFrete(total, endereco) : 0; // Calcular frete somente se o endereço estiver definido
     const temFreteGratis = total >= 20;
-  
+    
     const finalizarCompra = () => {
       if (!endereco) {
         alert("Por favor, informe o CEP para finalizar a compra.");
@@ -63,7 +63,7 @@ function Carrinho({
                       type="number"
                       value={item.quantidade}
                       min="1"
-                      max={estoqueDisponivel + item.quantidade}
+                     max={estoqueDisponivel}
                       onChange={(e) => {
                         let novaQuantidade = Number(e.target.value);
                         // Garantir que a nova quantidade não exceda o estoque
