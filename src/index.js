@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "https://esm.sh/react";
 import ReactDOM from "https://esm.sh/react-dom";
+import "./index.css";
 
 const dadosProdutosIniciais = [
   {
@@ -502,7 +503,7 @@ function CadastroAdmin({setShowCadastroAdmin, setAdmins, admins, setTelaAdmin })
       <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" />
       <input type="password" value={senha} onChange={(e) => setSenha(e.target.value)} placeholder="Senha" />
       <button className= "btn-admin" onClick={handleCadastro}>Cadastrar</button>
-      <button className= "btn-admin" onClick={() => setTelaAdmin('dashboard')} className="botao-voltar">Voltar</button>
+      <button className= "btn-admin" onClick={() => setTelaAdmin('dashboard')} classname="botao-voltar">Voltar</button>
     </div>
   );
 }
